@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import BasicTextFields from "./components/AddUser";
+import { Container, Grid } from "@mui/material";
+import BasicTable from "./components/User";
+import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="mt-4">
+      <Grid container spacing={2}>
+        <Grid item xs={4}>
+          <BasicTextFields></BasicTextFields>
+        </Grid>
+        <Grid item xs={8}>
+          <BasicTable></BasicTable>
+        </Grid>
+      </Grid>
+    </Container>
   );
 }
 
